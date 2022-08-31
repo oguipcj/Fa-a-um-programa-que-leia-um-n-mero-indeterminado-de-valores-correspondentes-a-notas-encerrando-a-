@@ -1,0 +1,19 @@
+def main():
+    v = float(input("Valor: "))
+    d = int(input("Dias: "))
+    print(f"O valor total a ser pago será R${payValue(v, d)}")
+
+
+def payValue(vp, da):
+    prest = vp
+    if da == 0:
+        return prest
+    else:
+        dia_atr = da
+        mt = prest * 0.03  # valor da multa
+        jr_atr = (dia_atr * (0.1 / 100)) * prest  # valor juros/dia
+        tot = prest + mt + jr_atr
+        return tot
+
+
+main()

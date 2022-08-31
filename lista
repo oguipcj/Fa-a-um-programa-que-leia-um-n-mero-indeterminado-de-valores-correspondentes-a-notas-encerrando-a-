@@ -1,8 +1,0 @@
-salarios = [200, 250, 320, 413, 516, 680, 791, 877, 999, 1000, 2000, 3000]
-Contagem_De_Faixa_Salarial = [0] * 9
-for salario in salarios:
-    indice = salario // 100 -2
-    indice_maximo = len(Contagem_De_Faixa_Salarial) -1
-    indice = min(indice, indice_maximo)
-    Contagem_De_Faixa_Salarial[indice] +=1
-print(Contagem_De_Faixa_Salarial)
