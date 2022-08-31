@@ -1,0 +1,33 @@
+valores = 0
+valores_lidos = []
+while valores != -1:
+    valores = float(input("Digite a nota ou -1 para encerrar: "))
+    if valores != -1:
+        valores_lidos.append(valores)
+print("Quantidade de valores que foram lidos:", len(valores_lidos))
+print("Valores na ordem em que foram informados, um ao lado do outro:", valores_lidos)
+for valores in valores_lidos:
+    print(valores, end=" ")
+print("\nValores na ordem inversa à que foram informados, um abaixo do outro:")
+for indice in range(len(valores_lidos) - 1, -1, -1):
+    print(valores_lidos[indice])
+print("Soma dos valores")
+print("\tUsandao a função Sum:", sum(valores_lidos))
+soma = 0
+for nota in valores_lidos:
+    soma += valores
+media = soma / len(valores_lidos)
+print("A média das notas:", media)
+print("Quantidade de valores acima da média: ", end="")
+acima_media = 0
+for valores in valores_lidos:
+    if valores > media:
+        acima_media += 1
+print(acima_media)
+print("Quantidade de valores abaixo de sete: ", end="")
+abaixo_7 = 0
+for valores in valores_lidos:
+    if valores < 7:
+        abaixo_7 += 1
+print(abaixo_7)
+print("FIM !!!!!!")
